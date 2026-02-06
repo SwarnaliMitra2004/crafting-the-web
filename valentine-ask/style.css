@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("heart-bg.jpg"); 
+    background-size: cover;
+    font-family: "Moo Lah Lah", sans-serif;
+    overflow: hidden;
+}
+
+#envelope-container {
+    text-align: center;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#envelope {
+    width: 200px;
+    animation: pulse 1.5s infinite;
+}
+
+#letter-container {
+    display: none; /* JS will change this to flex */
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.letter-window {
+    width: 90vw;
+    max-width: 600px;
+    padding: 180px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("window.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.letter-window.open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.cat { width: 250px; margin: 10px 0; }
+
+.buttons { display: flex; gap: 30px; position: relative; }
+
+.btn { width: 120px; cursor: pointer; user-select: none; }
+
+.yes-btn { z-index: 100; } /* Keep it above everything when growing */
+
+.final-text {
+    font-size: 22px;
+    background-color: rgba(255,240,240,0.8);
+    padding: 10px;
+    border-radius: 12px;
+}
