@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <!-- Main calculator container -->
+    <div id="calculator"> 
+        <!-- Calculator display screen -->
+        <input type="text" id="display" readonly>
+        <!-- Container for calculator buttons -->
+        <div class="button-container"></div>
+            <!-- Clear button: resets the display -->
+            <button class="button"onclick="currentDisplay='';
+            document.querySelector('#display').value=currentDisplay">C</button>
+
+            <!-- Number buttons (0-9): append respective digits to the expression -->
+             <!--onclick="...": This is an HTML attribute that listens for a "click" event. Whenever a user clicks this specific button, the browser will execute JavaScript code written inside the quotation marks.
+            currentDisplay = currentDisplay + '1';: This accesses the global currentDisplay string variable (defined in your <script> tag at the bottom) and appends the character '1' to the end of it. For example, if the display currently holds "45", it will become "451".
+            document.querySelector('#display').value = currentDisplay:
+            document.querySelector('#display') searches your HTML document for an element with the ID of display (which is your <input> text box).
+            .value = currentDisplay takes the newly updated string and sets it as the visible text inside that input box so the user can see their input on the calculator screen.-->
+            <button class="button" onclick="currentDisplay=currentDisplay+'1';
+            document.querySelector('#display').value=currentDisplay">1</button> 
+
+            <button class="button" onclick="currentDisplay=currentDisplay+'2';
+            document.querySelector('#display').value=currentDisplay">2</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'3';
+            document.querySelector('#display').value=currentDisplay">3</button>
+            
+            <button class="button"
+            onclick="currentDisplay=currentDisplay+'4';
+            document.querySelector('#display').value=currentDisplay">4</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'5';
+            document.querySelector('#display').value=currentDisplay">5</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'6';
+            document.querySelector('#display').value=currentDisplay">6</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'7';
+            document.querySelector('#display').value=currentDisplay">7</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'8';
+            document.querySelector('#display').value=currentDisplay">8</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'9';
+            document.querySelector('#display').value=currentDisplay">9</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'0';
+            document.querySelector('#display').value=currentDisplay">0</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'.';
+            document.querySelector('#display').value=currentDisplay">.</button>
+            
+            <!-- Equals button: evaluates the mathematical expression -->
+            <button class="button"onclick="
+            currentDisplay= eval(currentDisplay);
+            document.querySelector('#display').value=currentDisplay" >=</button>
+            
+            <!-- Operator buttons: append operators to the expression -->
+            <button class="button"onclick="currentDisplay=currentDisplay+'+';
+            document.querySelector('#display').value=currentDisplay">+</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'-';
+            document.querySelector('#display').value=currentDisplay">-</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'*';
+            document.querySelector('#display').value=currentDisplay">*</button>
+            
+            <button class="button" onclick="currentDisplay=currentDisplay+'/';
+            document.querySelector('#display').value=currentDisplay">/</button>
+        </div>
+    </div>
+    <!-- Script to initialize the calculator state -->
+    <script>
+        // Global variable to keep track of the current mathematical expression
+        let currentDisplay =''; 
+        // Initialize the display screen with an empty string on page load
+        document.querySelector('#display'). value=currentDisplay; 
+
+
+    </script>
+</body>
+</html>
