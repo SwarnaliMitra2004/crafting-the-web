@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main wrapper for the Kanban board -->
+    <div class="container">
+        <h1>Simple Kanban Board</h1>
+
+        <!-- Board container holding all the lists -->
+        <div class="board">
+            <!-- To Do Column -->
+            <div class="list" id="list1">
+                <h2>To Do</h2>
+                <div class="task" draggable="true" id="card1">Numerical Methods</div>
+                <!-- draggable makes the task draggable -->
+                <div class="task" draggable="true" id="card2">Computer Networks</div>
+                <div class="task" draggable="true" id="card3">Image Processing</div>
+            </div>
+            <!-- In Progress Column -->
+            <div class="list" id="list2">
+                <h2>In Progress</h2>
+                <div class="task" draggable="true" id="card4">Data Structures And Algorithms</div>
+                <div class="task" draggable="true" id="card5">Research Methodology</div>
+            </div>
+            <!-- Done Column -->
+            <div class="list" id="list3">
+                <h2>Done</h2>
+                <div class="task" draggable="true" id="card6">Database Management System</div>
+                <div class="task" draggable="true" id="card7">Operating System</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>

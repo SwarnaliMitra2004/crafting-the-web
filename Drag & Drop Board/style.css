@@ -1,0 +1,127 @@
+/* Base reset for consistent styling across browsers */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* This ensures that the padding and border are included in the element's total width and height */
+}
+
+/* Body layout and typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* This sets the default font for the entire page */
+    background-color: #f7f9fc;
+    color: #333;
+    height: 100vh;
+    /* This sets the height of the body to 100% of the viewport height */
+    display: flex;
+    /* This enables flexbox for the body */
+    justify-content: center;
+    /* This centers the content horizontally */
+    align-items: center;
+    /* This centers the content vertically */
+}
+
+/* Main wrapper for the entire application */
+.container {
+    width: 100%;
+    padding: 1.2rem;
+    /* rem means root em, which is equal to the font-size of the root element */
+    text-align: center;
+    /* This centers the text in the container */
+}
+
+/* Main page title */
+h1 {
+    margin-bottom: 1.2rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+/* Flex container holding all the columns/lists */
+.board {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    /* This creates a gap of 20px between the columns */
+}
+
+/* Individual column (drop zone) styling */
+.list {
+    background-color: #e3e4e8;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* This creates a shadow effect for the list */
+    flex: 1;
+    /* This makes the list take up equal space in the flex container */
+    min-height: 400px;
+    /* This sets the minimum height of the list */
+}
+
+/* Column header title */
+.list h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Individual draggable task styling */
+.task {
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: grab;
+    /* This makes the task draggable */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    /* This creates a smooth transition effect for the task */
+}
+
+/* Active state when a task is currently being dragged */
+.task:active {
+    cursor: grabbing;
+    /* This changes the cursor to a grabbing hand when the task is being dragged */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* This creates a shadow effect for the task */
+    transform: translateY(2px);
+    /* This moves the task down by 2px when it is being dragged */
+}
+
+/* Highlight effect for a list when a task is dragged over it */
+.list.over {
+    background-color: #d4d5d7;
+    border: 2px dashed #555;
+    transform: scale(1.02);
+    /* This zooms in the list when a task is dragged over it */
+    transition: all 0.2s ease;
+    /* This creates a smooth transition effect for the list */
+}
+
+/* Responsive styling for tablets and mobile devices */
+@media (max-width: 768px) {
+    .board {
+        /* This makes the board take up equal space in the flex container */
+        flex-direction: column;
+        /* This changes the direction of the flex container to column */
+        align-items: center;
+        /* This centers the items in the flex container */
+
+    }
+
+    .list {
+        /* This makes the list take up equal space in the flex container */
+        width: 80%;
+        /* This sets the width of the list */
+        margin-bottom: 20px;
+        /* This sets the bottom margin of the list */
+    }
+}
