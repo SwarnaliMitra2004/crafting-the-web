@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container"> <!-- Main wrapper for the application -->
+        <div class="weather_container"> <!-- Container for weather information -->
+            <div class="temp"> <!-- Container for temperature information -->
+                <p>25 °C</p>
+            </div>
+            <div class="time_location"> <!-- Container for time and location information -->
+                <p>New York | 12:00</p>
+            </div>
+            <div class="condition"> <!-- Container for weather condition information -->
+                <img src="https://cdn.weatherapi.com/weather/64x64/day/119.png" alt="Weather Icon"
+                    class="condition-icon">
+                <p>Cloudy</p>
+            </div>
+            <div class="extra-data"> <!-- Container for additional weather stats -->
+                <p class="humidity">Humidity: --%</p>
+                <p class="wind">Wind: -- km/h</p>
+                <p class="feels-like">Feels like: --°C</p>
+            </div>
+        </div>
+    </div>
+    <nav> <!-- Navigation bar for the application -->
+        <form> <!-- Form for submitting city search -->
+            <input type="text" placeholder="Search for location.." class="city_input">
+            <button type="submit" class="submit-location">Search</button>
+            <!-- Button for using current location -->
+        </form>
+    </nav>
+    <script src="script.js"></script>
+</body>
+
+</html>

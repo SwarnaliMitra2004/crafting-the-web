@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    /* enables flexbox for the body element */
+    flex-direction: column;
+    /* arranges flex items vertically */
+    justify-content: center;
+    /* centers flex items horizontally */
+    align-items: center;
+    /* centers flex items vertically */
+    min-height: 100vh;
+    /* ensures the body takes up the full height of the viewport, effectively pushing the nav to the bottom when content is short */
+    gap: 20px;
+    /* provides spacing between flex items */
+
+}
+
+.container {
+    width: 300px;
+    /* sets the width of the container */
+    height: 350px;
+    /* sets the height of the container */
+    background-color: #f0f8ff;
+    /* sets the background color of the container */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    /* adds a shadow to the container */
+    display: flex;
+    /* enables flexbox for the container */
+    justify-content: center;
+    /* centers flex items horizontally */
+    align-items: center;
+    /* centers flex items vertically */
+    gap: 20px;
+    /* provides spacing between flex items */
+}
+
+.weather_container {
+    /* sets the background color of the weather container */
+    background-color: #add8e6;
+    width: 80%;
+    height: 80%;
+    /* adds padding to the weather container */
+    padding: 20px;
+    /* sets the border radius of the weather container */
+    border-radius: 10px;
+    /* enables flexbox for vertical centering */
+    display: flex;
+    flex-direction: column;
+    /* arranges flex items vertically */
+    justify-content: center;
+    /* centers flex items horizontally */
+}
+
+.temp {
+    /* sets the text alignment of the temp container */
+    text-align: center;
+    /* sets the margin of the temp container */
+    margin: 1rem;
+    /* sets the font size of the temp container */
+    font-size: 3rem;
+    /* sets the font family of the temp container */
+    font-family: sans-serif;
+}
+
+.time_location {
+    /* sets the text alignment of the time_location container */
+    text-align: center;
+    /* sets the font size of the time_location container */
+    font-size: 1rem;
+    /* sets the font family of the time_location container */
+    font-family: sans-serif;
+    /* sets the margin of the time_location container */
+    margin: 1rem;
+    /* respects the newline character from JavaScript */
+    white-space: pre-line;
+}
+
+.condition {
+    /* sets the text alignment of the condition container */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* sets the margin of the condition container */
+    margin: 0.5rem;
+    /* adds space around the condition */
+    font-family: sans-serif;
+    /* sets the font family of the condition */
+    font-size: 1.5rem;
+    /* sets the font size of the condition */
+}
+
+.condition-icon {
+    /* sets the dimensions of the weather icon */
+    width: 50px;
+    height: 50px;
+}
+
+.extra-data {
+    display: flex;
+    /* enables flexbox for the extra-data container */
+    flex-direction: row;
+    /* arranges flex items horizontally */
+    justify-content: space-evenly;
+    /* distributes flex items evenly across the container */
+    align-items: center;
+    /* centers flex items vertically */
+    width: 100%;
+    /* sets the width of the extra-data container */
+    font-family: sans-serif;
+    /* sets the font family of the extra-data container */
+    font-size: 0.8rem;
+    /* sets the font size of the extra-data container */
+    margin-top: 1.5rem;
+    /* sets the margin of the extra-data container */
+    color: #444;
+    /* sets the color of the extra-data container */
+    text-align: center;
+    /* sets the text alignment of the extra-data container */
+}
+
+nav {
+    height: 50%;
+    /* sets the height of the nav element */
+    width: 50%;
+    /* sets the width of the nav element */
+    background-color: #f0f8ff;
+    /* sets the background color of the nav element */
+    border-radius: 10px;
+    /* sets the border radius of the nav element */
+    display: flex;
+    /* enables flexbox for the nav element */
+    flex-direction: column;
+    /* arranges flex items vertically */
+    justify-content: center;
+    /* centers flex items horizontally */
+    align-items: center;
+    /* centers flex items vertically */
+    gap: 20px;
+    /* provides spacing between flex items */
+}
+
+nav form {
+    display: flex;
+    /* enables flexbox for the form element */
+    justify-content: center;
+    /* centers flex items horizontally */
+    align-items: center;
+    /* centers flex items vertically */
+    gap: 20px;
+    /* provides spacing between flex items */
+}
+
+nav form input {
+    /* sets the border radius of the input element */
+    border-radius: 10px;
+    /* sets the padding of the input element */
+    padding: 10px;
+    /* sets the width of the input element */
+    width: 100%;
+    /* sets the height of the input element */
+    height: 100%;
+    /* sets the border of the input element */
+    border: none;
+    /* sets the outline of the input element */
+    outline: none;
+    /* sets the box shadow of the input element */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    /* sets the font family of the input element */
+    font-family: sans-serif;
+    /* sets the font size of the input element */
+    font-size: 1rem;
+    /* sets the color of the input element */
+    color: #333;
+    /* centers the text inside the input */
+    text-align: center;
+}
+
+nav form input::placeholder {
+    color: #333;
+}
+
+nav form button {
+    /* enables flexbox for the button element */
+    border: none;
+    /* sets the outline of the button element */
+    outline: none;
+    /* sets the width of the button element */
+    width: 50px;
+    /* sets the height of the button element */
+    height: 50px;
+    /* sets the border radius of the button element */
+    border-radius: 20%;
+    /* sets the cursor of the button element */
+    cursor: pointer;
+    /* sets the background color of the button element */
+    background-color: #e8dd30;
+    /* sets the box shadow of the button element */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    /* sets the transition of the button element */
+    transition: 0.2s linear;
+}
+
+nav form button:hover {
+    background-color: #e8f90a;
+}
